@@ -1,15 +1,28 @@
 # testbbva
 dataset test CoE Intern
 
-## Descripción del Dataset
-El dataset generado contiene información sobre productos de una tienda. Cada registro representa un producto y sus características asociadas. El dataset tiene un total de 500 registros y las siguientes columnas:
+## Descripción del Dataset de Clasificación
+Este dataset contiene información sobre clientes y está diseñado para un ejercicio de clasificación, donde el objetivo es predecir si un cliente hará un default en el pago (es decir, si no pagará). El dataset tiene 500 registros y las siguientes columnas:
 
-id_producto: Identificador único para cada producto.
+id_cliente: Identificador único para cada cliente.
 
-*nombre_producto*: Nombre del producto, con un formato como "Producto A", "Producto B", etc.
+edad: Edad del cliente.
 
-*precio*: Precio del producto en una escala de 5 a 50 unidades monetarias.
+ingreso_anual: Ingreso anual del cliente en unidades monetarias.
 
-*ventas*: Cantidad de ventas del producto, con valores entre 30 y 300 unidades.
+gasto_mensual: Gasto mensual del cliente en unidades monetarias.
 
-*categoria*: Categoría a la que pertenece el producto, que puede ser una de las siguientes: "Electrónica", "Hogar" o "Alimentos".
+estado_civil: Estado civil del cliente, que puede ser uno de los siguientes: "Soltero", "Casado", "Divorciado", "Viudo".
+
+default_de_pago: Indicador binario de si el cliente ha hecho default en el pago (0 = No, 1 = Sí).
+
+## Descripción del Dataset Complementario de Clasificación
+Este dataset complementa al anterior y contiene información adicional sobre los clientes. Cada registro en este dataset está relacionado con un registro en el primer dataset mediante el campo id_cliente. Las columnas de este dataset son:
+
+id_cliente: Identificador único para cada cliente, que coincide con el primer dataset.
+
+ocupacion: Ocupación del cliente, que puede ser una de las siguientes: "Empleado", "Desempleado", "Autónomo", "Jubilado".
+
+num_dependientes: Número de dependientes que tiene el cliente.
+
+region: Región donde reside el cliente, que puede ser una de las siguientes: "Norte", "Sur", "Este", "Oeste".
